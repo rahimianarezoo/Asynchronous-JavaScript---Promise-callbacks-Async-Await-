@@ -44,3 +44,9 @@ order(2000, () => console.log(`Your order is placed now`))
     .then( () => {
         return order(3000, () => console.log("Your order is ready to serve! Bon Apetit"));
     })
+    .catch( () => {
+        console.log("customer left the shop")
+    })
+    .finally( () => {
+        console.log("Thanks for choosing us! we hope to see you again soon.")
+    })
