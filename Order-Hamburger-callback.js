@@ -1,12 +1,3 @@
-//    #1 Place an order                -> 2
-//    #2 Choose the meat               -> 2
-//    #3 Grill the meat                -> 1
-//    #4 Add prefred sauce on top      -> 1
-//    #5 Pick the bread                -> 2
-//    #6 pick the fries and drink      -> 3
-//    #7 Serve the hamburger           -> 2 
-
-
 let stocks = {
     meat : ["Beef", "Fish", "Chicken"],
     fries : ["funky fries", "home made", "butter with herbs"],
