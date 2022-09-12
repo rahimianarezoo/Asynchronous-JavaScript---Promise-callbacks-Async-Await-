@@ -22,4 +22,25 @@ let order = (time, work) => {
     })
 }
 
-order(1000, () => console.log(stocks.bread[2]))
+order(2000, () => console.log(`Your order is placed now`))
+    .then( ()=> {
+        return order(2000, () => console.log(`${stocks.meat[2]} is selected as your meat`));
+    })
+
+    .then( () => {
+        return order(1000, () => console.log(`Your ${stocks.meat[1]} is grilling.`));
+    })
+
+    .then( () => {
+        return order(1000, () => console.log(`${stocks.sauce[0]} is added on top.`));
+    })
+
+    .then( () => {
+        return order(2000, () => console.log(`${stocks.bread[0]} is selected for your bread.`));
+    })
+    .then( () => {
+        return order(3000, () => console.log(`${stocks.fries[2]} and ${stocks.drink[2]} for your drink were selected.`));
+    })
+    .then( () => {
+        return order(3000, () => console.log("Your order is ready to serve! Bon Apetit"));
+    })
