@@ -20,7 +20,19 @@ function time(ms) {
 async function kitchen() {
     try {
         await time(2000);
-
+        console.log(`Your order is placed now`);
+        await time(2000);
+        console.log(`${stocks.meat[2]} is selected as your meat`);
+        await time(1000);
+        console.log(`Your ${stocks.meat[1]} is grilling.`);
+        await time(1000);
+        console.log(`${stocks.sauce[0]} is added on top.`);
+        await time(2000);
+        console.log(`${stocks.bread[0]} is selected for your bread.`);
+        await time(3000);
+        console.log(`${stocks.fries[2]} and ${stocks.drink[2]} for your drink were selected.`);
+        await time(2000);
+        console.log("Your order is ready to serve! Bon Apetit");
     } catch(error) {
         console.log("customer left", error)
     } finally {
