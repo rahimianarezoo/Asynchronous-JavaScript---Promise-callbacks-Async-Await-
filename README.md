@@ -31,3 +31,16 @@ Remember that callbacks are okay for single asynchronous operations but they cer
 For sure you may need asynchronous process into your code but with callback hells?!
 
 This is where another feature named "promise" plays a role. Promise has a cycle and you must stick to this cysle if you have a plan to use promise in your code.
+
+I am going to explain it in my example then it would be more understandable. After a promise is made means what promise do you to your customer, in my example I promise to serve a sandwitch, this is a promise cycle:
+
+1- Pending stage -> nothing is happening here e.g. no hamburger order received yet! so I didn't start made hamburger.
+
+2- Resolve / Reject stage -> when I recieved an order like chicken burger, then I can resolve (whether I have all ingredient) or reject (if I don't have chicken)
+
+3- .Then process -> Here after resolve in step 2, my 7 steps come to play, each step run after each other here e.g. Choose the meat THEN grill the meat THEN Add prefred sauce on top THEN ...
+
+4- .catch process -> Here after reject in step 2, I need to wrote a sorry note to my customer and in .catch I will do that
+
+5- .Finally -> either step 2 will end with resolve / reject, .finally must be run. imagine that I receive 0 customer daily and at the end of the day I have to close my shop so .finally handler must run at the end.
+
