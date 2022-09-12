@@ -44,3 +44,14 @@ I am going to explain it in my example then it would be more understandable. Aft
 
 5- .Finally -> either step 2 will end with resolve / reject, .finally must be run. imagine that I receive 0 customer daily and at the end of the day I have to close my shop so .finally handler must run at the end.
 
+
+
+I also provide file named "Order-Hamburger-Async-await.js" to understand Async-Await better in an example. For using Async-Await you must mention "async" keyword before createing function e.g. async function order() {}.
+
+And you also need three thing inside the function:
+
+- try
+- catch
+- finally
+
+

@@ -9,44 +9,39 @@ let stocks = {
 let is_shop_open = true;
 
 let order = (time, work) => {
-
-    return new Promise( (resolve,promise) => {
-
+    return new Promise((resolve, reject) => {
         if (is_shop_open) {
-            setTimeout( () => {
+            setTimeout(() => {
                 resolve(work());
-            }, time)
+            }, time);
         } else {
-            reject( console.log("our shop is closed"))
+            reject(console.log("our shop is closed"))
         }
     })
 }
 
 order(2000, () => console.log(`Your order is placed now`))
-    .then( ()=> {
+    .then(() => {
         return order(2000, () => console.log(`${stocks.meat[2]} is selected as your meat`));
     })
-
-    .then( () => {
+    .then(() => {
         return order(1000, () => console.log(`Your ${stocks.meat[1]} is grilling.`));
     })
-
-    .then( () => {
+    .then(() => {
         return order(1000, () => console.log(`${stocks.sauce[0]} is added on top.`));
     })
-
-    .then( () => {
+    .then(() => {
         return order(2000, () => console.log(`${stocks.bread[0]} is selected for your bread.`));
     })
-    .then( () => {
+    .then(() => {
         return order(3000, () => console.log(`${stocks.fries[2]} and ${stocks.drink[2]} for your drink were selected.`));
     })
-    .then( () => {
+    .then(() => {
         return order(3000, () => console.log("Your order is ready to serve! Bon Apetit"));
     })
-    .catch( () => {
+    .catch(() => {
         console.log("customer left the shop")
     })
-    .finally( () => {
+    .finally(() => {
         console.log("Thanks for choosing us! we hope to see you again soon.")
     })
